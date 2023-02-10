@@ -12,6 +12,9 @@ jobs:
 
       - uses: docker/setup-buildx-action@v2
 
+      - name: Put GITHUB_REF_NAME into env
+        run: echo GITHUB_REF_NAME=${GITHUB_REF_NAME} >> $GITHUB_ENV
+
       - name: Set the major version number
         run: echo MAJOR_VERSION=${GITHUB_REF_NAME} | sed -e 's/\..*//' >> $GITHUB_ENV
 
@@ -25,7 +28,7 @@ jobs:
       - name: try echo
         run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.MAJOR_VERSION }}
       - name: try echo 2
-        run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${GITHUB_REF_NAME}
+        run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${env.GITHUB_REF_NAME}
       - name: try echo 3
         run: echo MAJOR_VERSION=${GITHUB_REF_NAME}
 
@@ -39,6 +42,6 @@ jobs:
           tags: |
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java1:latest
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java2:${{env.MAJOR_VERSION}}
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${{GITHUB_REF_NAME}}
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${{env.GITHUB_REF_NAME}}
 
 
