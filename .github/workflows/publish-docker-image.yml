@@ -25,7 +25,7 @@ jobs:
       - name: try echo
         run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.MAJOR_VERSION }}
       - name: try echo 2
-        run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ GITHUB_REF_NAME }}
+        run: "echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${ GITHUB_REF_NAME }"
       - name: try echo 3
         run: echo MAJOR_VERSION=${GITHUB_REF_NAME}
 
@@ -37,8 +37,8 @@ jobs:
           build-args: |
             RELEASE_VER=${ GITHUB_REF_NAME }
           tags: |
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:latest
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${ env.MAJOR_VERSION }
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${ GITHUB_REF_NAME }
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java1:latest
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java2:${ env.MAJOR_VERSION }
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${ GITHUB_REF_NAME }
 
 
