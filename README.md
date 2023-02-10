@@ -1,0 +1,4 @@
+# Howto
+
+Settings -> Actions -> General
+
