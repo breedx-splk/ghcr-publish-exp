@@ -28,7 +28,7 @@ jobs:
       - name: try echo
         run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.MAJOR_VERSION }}
       - name: try echo 2
-        run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${env.GITHUB_REF_NAME}
+        run: echo ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{env.GITHUB_REF_NAME}}
       - name: try echo 3
         run: echo MAJOR_VERSION=${GITHUB_REF_NAME}
 
