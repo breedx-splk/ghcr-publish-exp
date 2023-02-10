@@ -33,8 +33,8 @@ jobs:
           build-args: |
             RELEASE_VER=${{ env.GITHUB_REF_NAME }}
           tags: |
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java1:latest
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java2:${{ env.MAJOR_VERSION }}
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${{ env.GITHUB_REF_NAME }}
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:latest
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.MAJOR_VERSION }}
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.GITHUB_REF_NAME }}
 
 
