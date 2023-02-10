@@ -39,6 +39,6 @@ jobs:
           tags: |
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java1:latest
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java2:${{env.MAJOR_VERSION}}
-            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${GITHUB_REF_NAME}
+            ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java3:${{GITHUB_REF_NAME}}
 
 
