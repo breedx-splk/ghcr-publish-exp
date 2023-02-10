@@ -1,7 +1,7 @@
 FROM scratch
 
-ARG GITHUB_REF
-ENV GITHUB_REF=$GITHUB_REF
+ARG RELEASE_VER
+ENV RELEASE_VER=$RELEASE_VER
 
-ADD https://github.com/signalfx/splunk-otel-java/releases/download/${GITHUB_REF}/splunk-otel-javaagent.jar /
+ADD https://github.com/signalfx/splunk-otel-java/releases/download/${RELEASE_VER}/splunk-otel-javaagent.jar /
 
