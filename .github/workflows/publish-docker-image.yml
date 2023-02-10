@@ -28,7 +28,7 @@ jobs:
           push: true
           file: Dockerfile
           build-args: |
-            RELEASE_VER=${{ GITHUB_REF_NAME }}
+            RELEASE_VER=${{ env.GITHUB_REF_NAME }}
           tags: |
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:latest
             ghcr.io/breedx-splk/ghcr-publish-exp/splunk-otel-instrumentation-java:${{ env.MAJOR_VERSION }}
